@@ -1,0 +1,487 @@
+/* For variables to store color hex codes */
+:root {
+  --navbar: #344e41;
+  --main: #588157;
+  --footer: #a3b18a;
+  --text: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* OVERALL BODY */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--navbar);
+  color: var(--text);
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELGR" 1, "ELSH" 2;
+  font-size: 20px;
+}
+.navbar .intro {
+  display: flex;
+  align-items: center;
+}
+.navbar .intro p {
+  padding-left: 5px;
+}
+.navbar span img {
+  background-color: transparent;
+  filter: invert(1);
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  padding-right: 5px;
+}
+.navbar li {
+  padding: 5px;
+}
+.navbar li:hover {
+  opacity: 0.5;
+}
+.navbar li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HOME */
+.home {
+  background-color: var(--main);
+  min-height: 87vh;
+  color: var(--text);
+}
+.home h2 {
+  margin: 0;
+  text-align: center;
+}
+.home p {
+  margin: 0;
+  font-size: 18px;
+  text-align: justify;
+}
+.home .container-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+  font-size: 18px;
+}
+.home .form-home {
+  position: absolute;
+  font-size: 18px;
+  top: 60%;
+  left: 20%;
+}
+.home .form-home .home-btn-container {
+  border: 2px solid #bcbcbc;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--text);
+  color: var(--main);
+  width: 30%;
+  position: relative;
+  left: 30%;
+}
+.home .form-home .home-btn-container .home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.home .form-home .home-btn-container button {
+  background-color: var(--main);
+  color: var(--text);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  transform: translateX(80%);
+  width: 40%;
+  cursor: pointer;
+}
+.home .form-home .home-btn-container button:hover {
+  opacity: 0.5;
+}
+
+/* ABOUT */
+.about {
+  background-color: var(--main);
+  min-height: 87vh;
+  color: var(--text);
+  font-size: 18px;
+}
+.about p {
+  margin: 0;
+  text-align: justify;
+  padding: 5px;
+}
+.about h3 {
+  margin: 0;
+  padding: 5px;
+}
+
+/* CONTACT */
+.contact {
+  background-color: var(--main);
+  min-height: 87vh;
+  color: var(--text);
+  padding: 5px;
+  font-size: 18px;
+}
+.contact h3 {
+  margin: 0;
+}
+.contact p:last-child {
+  margin: 0;
+}
+.contact ul li {
+  padding: 3px;
+}
+.contact button {
+  background-color: var(--footer);
+  color: var(--text);
+  padding: 7px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100px;
+}
+.contact button:hover {
+  border: 2px solid black;
+}
+.contact input {
+  margin-left: 5px;
+  padding: 3px;
+}
+
+/* INSTRUCTIONS */
+.instruction {
+  background-color: var(--main);
+  min-height: 87vh;
+  color: var(--text);
+}
+.instruction h1 {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+.instruction li {
+  padding: 5px;
+  font-size: 18px;
+}
+.instruction .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.instruction .btn-instruction {
+  border-radius: 20px;
+  border: none;
+  background-color: var(--footer);
+  padding: 10px;
+  width: 10%;
+  font-size: 18px;
+  color: var(--text);
+  cursor: pointer;
+  width: 100px;
+}
+.instruction .btn-instruction:hover {
+  opacity: 0.5;
+}
+
+/* MAIN */
+.main {
+  background-color: var(--main);
+  min-height: 87vh;
+  color: var(--text);
+}
+.main h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main ul {
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+}
+.main li {
+  cursor: pointer;
+}
+.main li:hover {
+  opacity: 0.5;
+}
+.active-heading {
+  background-color: #455e45;
+  border-radius: 3px;
+  padding: 3px;
+}
+.main .form {
+  display: flex;
+  align-items: flex-start;
+  max-width: 400px;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.main .form .inside-form {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.main .form .inside-form label {
+  width: 100%;
+}
+.main .form select,
+.main .form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.main .form .form-btn {
+  display: flex;
+  margin: 0 auto;
+}
+.main .form button {
+  display: flex;
+  margin: 0 auto;
+  padding: 7px 50px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  background-color: var(--footer);
+  color: var(--text);
+  cursor: pointer;
+}
+.main .form button:hover {
+  border: 2px solid black;
+}
+
+/* RESULT */
+.result {
+  background-color: var(--main);
+  min-height: 87vh;
+  font-size: 18px;
+  color: var(--text);
+  flex-grow: 1;
+}
+.result h1,
+h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.result h2 {
+  font-weight: 500;
+  margin-top: 20px;
+}
+.result h2 b {
+  padding-left: 10px;
+}
+/* Result Graph */
+.result .graph {
+  padding: 5px 20px 10px 20px;
+}
+.result .graph .pieChart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.result .graph .pieChart .pieChartInputed,
+.pieChartCreated {
+  padding: 5px;
+  background-color: #fff;
+  border: 2px solid gray;
+  border-radius: 10px;
+  width: 650px;
+  height: 300px;
+  overflow: auto;
+  /* because of bug have to use this scroll bar💀  */
+}
+.result .graph .pieChart .pieChartInputed h3 {
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+.result .graph .pieChart .pieChartCreated h3 {
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+.result .reduce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result .reduce-btn {
+  padding-bottom: 10px;
+}
+.result .reduce-btn button {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  background-color: var(--footer);
+  color: var(--text);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.result .reduce-btn button:hover {
+  border: 2px solid black;
+}
+
+/* REDUCE PAGE */
+.reduce {
+  background-color: var(--main);
+  min-height: 100vh;
+  flex: 1;
+  color: var(--text);
+  position: relative;
+}
+.reduce h1 {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5px;
+}
+.reduce img {
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+}
+.reduce ul {
+  font-size: 18px;
+}
+.reduce li {
+  padding: 10px;
+}
+.reduce p {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--footer);
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  color: var(--text);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23.5px;
+}
+
+/* RESPONSIVNESS */
+@media screen and (max-width: 800px) {
+  .home {
+    min-height: 100vh;
+    font-size: 14px;
+  }
+  .home .container-home {
+    display: block;
+  }
+  .home .container-home img {
+    margin: 0 auto;
+    display: flex;
+  }
+  .home .form-home {
+    position: static;
+  }
+  .home .form-home h3 {
+    margin: 0;
+  }
+  .home .form-home .home-btn-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+  }
+  .about {
+    font-size: 14px;
+  }
+  .about .about-team {
+    padding-bottom: 10px;
+  }
+  .contact {
+    font-size: 14px;
+  }
+  .main .form .inside-form {
+    display: block;
+  }
+  .main ul {
+    display: block;
+  }
+  .result {
+    min-height: 100vh;
+  }
+  .result h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .result .reduce-btn {
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 545px) {
+  .result h2 {
+    font-size: 15px;
+    display: block;
+  }
+  .result .graph .pieChart {
+    display: block;
+  }
+  .result .graph .pieChart .pieChartInputed {
+    width: 500px;
+  }
+  .result .graph .pieChart .pieChartCreated,
+  .pieChartInputed {
+    width: 500px;
+  }
+  .reduce {
+    font-size: 14px;
+  }
+}
