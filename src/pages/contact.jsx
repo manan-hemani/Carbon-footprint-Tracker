@@ -6,7 +6,8 @@ import Footer from "../components/footer";
 export default function Contact() {
   // Feedback msg alert not fully functional but just for presentation purpose
   const submitAlert = () => {
-    alert("Your Feedback is Submitted!");
+    alert("Your Feedback is Submitted! Thank You😊");
+    console.log(submitName, submitEmail, submitSubject, submitMessage);
   };
 
   const [submitName, setsubmitName] = useState("");
@@ -25,7 +26,6 @@ export default function Contact() {
   const handleSubmitMessage = (e) => {
     setsubmitMessage(e.target.value);
   };
-  console.log(submitName, submitEmail, submitSubject, submitMessage);
   return (
     <>
       <Navbar />
