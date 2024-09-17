@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
@@ -7,6 +8,24 @@ export default function Contact() {
   const submitAlert = () => {
     alert("Your Feedback is Submitted!");
   };
+
+  const [submitName, setsubmitName] = useState("");
+  const handleSubmitName = (e) => {
+    setsubmitName(e.target.value);
+  };
+  const [submitEmail, setsubmitEmail] = useState("");
+  const handleSubmitEmail = (e) => {
+    setsubmitEmail(e.target.value);
+  };
+  const [submitSubject, setsubmitSubject] = useState("");
+  const handleSubmitSubject = (e) => {
+    setsubmitSubject(e.target.value);
+  };
+  const [submitMessage, setsubmitMessage] = useState("");
+  const handleSubmitMessage = (e) => {
+    setsubmitMessage(e.target.value);
+  };
+  console.log(submitName, submitEmail, submitSubject, submitMessage);
   return (
     <>
       <Navbar />
@@ -52,25 +71,45 @@ export default function Contact() {
             <label htmlFor="Name">
               <li>
                 Name:
-                <input type="text" placeholder="Your Name" />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={submitName}
+                  onChange={handleSubmitName}
+                />
               </li>
             </label>
             <label htmlFor="Email:">
               <li>
                 Email:
-                <input type="email" placeholder="Your Email" />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  value={submitEmail}
+                  onChange={handleSubmitEmail}
+                />
               </li>
             </label>
             <label htmlFor="Subject">
               <li>
                 Subject:
-                <input type="text" placeholder="Your Subject" />
+                <input
+                  type="text"
+                  placeholder="Your Subject"
+                  value={submitSubject}
+                  onChange={handleSubmitSubject}
+                />
               </li>
             </label>
             <label htmlFor="Message">
               <li>
-                Message
-                <input type="text" placeholder="Your Message" />
+                Message:
+                <input
+                  type="text"
+                  placeholder="Your Message"
+                  value={submitMessage}
+                  onChange={handleSubmitMessage}
+                />
               </li>
             </label>
           </form>

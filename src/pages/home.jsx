@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 
-// FIX THIS NAVIGATE TO INSTRUCTIONS PAGE USING BTN OR USE IT AS NAVBAR UL LI ONE
+
 
 const Home = () => {
   const navigate = useNavigate();
